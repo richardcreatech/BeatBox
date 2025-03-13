@@ -26,7 +26,7 @@ body{
         justify-content: space-around;
         position: fixed;
         width: 100%;
-        background-color: #FFB703;
+        /* background-color: #FFB703; */
         height: 70px;
         align-items: center;
         box-shadow: 0 0 420px rgba(0, 0, 0, 0.573);
