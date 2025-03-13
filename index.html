@@ -1,129 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body{
-            overflow: hidden;
-        }
-        main{
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.474);
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.923);
-        }
-
-        .drumsSection{
-            width: 70%;
-            height: 70%;
-            border: solid;
-            display: grid;
-            grid-template-columns: repeat(3,3fr);
-            box-shadow: 0  0 20px;
-        }
-
-        .drumsSection .pad{
-            width: 100%;
-            height: 100%;
-            border: solid;
-            background: radial-gradient( grey, black);
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeatBox Drumpad</title>
+    <title>BeatBox</title>
 </head>
 <body>
-    <audio src=""></audio>
+
+    <header>
+        <h1 class="logo">
+            BeatBox
+        </h1>
+
+        <nav class="original-nav">
+            <ul>
+                <li><a href="Drumpad/drums.html">Try Out for free</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    
+        <nav class="invisibleMenu">
+            <ul class="ul">
+                #
+            </ul>
+        </nav>
+    </header>
+
     <main>
-        <section class="drumsSection">
-            <div class="pad pad1"></div>
-            <div class="pad pad2"></div>
-            <div class="pad pad3"></div>
-            <div class="pad pad4"></div>
-            <div class="pad pad5"></div>
-            <div class="pad pad6"></div>
+        <section class="section-1">
+            <div class="oneBackground">
+                <img class="flowerPics" src="./img/flowerBackground.jpg" alt="">
+            </div>
+
+            <div class="mainText">
+
+                <div class="mainSpace">
+                    <h1>Find Your Rhythm</h1>
+                    <h2 class="oneh2">Play the drums, Take the stage, make your beat</h2>
+                </div>
+
+                <div class="registerSpace">
+                <div class="signUp">
+                    <h2>BeatBox</h2>
+                    <h1>Find Your Rhythm</h1>
+                    <div class="responsiveAsk">
+                    <a href="Drumpad/drums.html">Try Out for free</a><br>
+                    <a href="#">Login</a></li>
+                </div>
+                </div>
+            </div>
+                
+            </div>
+
         </section>
     </main>
-    
+
 </body>
-<script>
-    const generalPads = document.getElementsByClassName('pad');
-    
-    const audioList = [
-        {
-            src: "././drumPad Beats/1000000321-1.mp3"
-        }
-        ,
-        {
-            src: "./drumPad Beats/1000000513.mp3"
-        }
-        ,
-        {
-            src: "./drumPad Beats/1000044027.mp3"
-        }
-        ,
-        {
-            src: "./drumPad Beats/AUD-20250224-WA0082.mp3"
-        }
-        ,
-        {
-            src: "./drumPad Beats/Metronome.mp3"
-        }
-        ,
-        {
-            src: "./drumPad Beats/1000039522.mp3"
-        }
-    ]
-    
-    
-    const pad1 = document.querySelector('.pad1');
-    const pad2 = document.querySelector('.pad2');
-    const pad3 = document.querySelector('.pad3');
-    const pad4 = document.querySelector('.pad4');
-    const pad5 = document.querySelector('.pad5');
-    const pad6 = document.querySelector('.pad6');
-     
-    
-    const src = "./drumPad Beats/1000039522.mp3";
-    
-    for(let i = 0; i < audioList.length; i++){
-        generalPads[i].onclick = () => {
-            generalPads[i].innerHTML = `
-            <audio src="${audioList[i].src}" autoplay></audio>
-            `;
-
-            generalPads[i].style.background = "radial-gradient( black, grey)";
-        }
-
-        
-
-        for(let k = 0; k < audioList.length; k++){
-            generalPads[k].ondblclick = () => {
-            generalPads[k].innerHTML = `
-            <audio  autoplay></audio>
-            `;
-
-            
-
-            setTimeout(() => {
-                generalPads[k].style.background = "radial-gradient( grey, black)";
-            }, 1000)
-        }
-        }
-    }
-   
-    
-    
-    </script>
-    
-    </html>
+</html>

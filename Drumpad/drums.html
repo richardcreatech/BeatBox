@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        main{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.474);
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.923);
+        }
+
+        .drumsSection{
+            width: 70%;
+            height: 70%;
+            border: solid;
+            display: grid;
+            grid-template-columns: repeat(3,3fr);
+            box-shadow: 0  0 20px;
+        }
+
+        .drumsSection .pad{
+            width: 100%;
+            height: 100%;
+            border: solid;
+            background: radial-gradient( grey, black);
+        }
+
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatBox Drumpad</title>
+</head>
+<body>
+    <audio src=""></audio>
+    <main>
+        <section class="drumsSection">
+            <div class="pad pad1"></div>
+            <div class="pad pad2"></div>
+            <div class="pad pad3"></div>
+            <div class="pad pad4"></div>
+            <div class="pad pad5"></div>
+            <div class="pad pad6"></div>
+        </section>
+    </main>
+    
+</body>
+<script>
+    const generalPads = document.getElementsByClassName('pad');
+    
+    const audioList = [
+        {
+            src: "././drumPad Beats/1000000321-1.mp3"
+        }
+        ,
+        {
+            src: "./drumPad Beats/1000000513.mp3"
+        }
+        ,
+        {
+            src: "./drumPad Beats/1000044027.mp3"
+        }
+        ,
+        {
+            src: "./drumPad Beats/AUD-20250224-WA0082.mp3"
+        }
+        ,
+        {
+            src: "./drumPad Beats/Metronome.mp3"
+        }
+        ,
+        {
+            src: "./drumPad Beats/1000039522.mp3"
+        }
+    ]
+    
+    
+    const pad1 = document.querySelector('.pad1');
+    const pad2 = document.querySelector('.pad2');
+    const pad3 = document.querySelector('.pad3');
+    const pad4 = document.querySelector('.pad4');
+    const pad5 = document.querySelector('.pad5');
+    const pad6 = document.querySelector('.pad6');
+     
+    
+    const src = "./drumPad Beats/1000039522.mp3";
+    
+    for(let i = 0; i < audioList.length; i++){
+        generalPads[i].onclick = () => {
+            generalPads[i].innerHTML = `
+            <audio src="${audioList[i].src}" autoplay></audio>
+            `;
+
+            generalPads[i].style.background = "radial-gradient( black, grey)";
+        }
+
+        
+
+        for(let k = 0; k < audioList.length; k++){
+            generalPads[k].ondblclick = () => {
+            generalPads[k].innerHTML = `
+            <audio  autoplay></audio>
+            `;
+
+            
+
+            setTimeout(() => {
+                generalPads[k].style.background = "radial-gradient( grey, black)";
+            }, 1000)
+        }
+        }
+    }
+   
+    
+    
+    </script>
+    
+    </html>
