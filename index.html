@@ -1,11 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        @media(min-width: 1000px){
+            body{
+                overflow: hidden;
+            }
+    
+            header{
+                color: aliceblue;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                width: 100%;
+                background-color: #FFB703;
+                height: 70px;
+                align-items: center;
+                box-shadow: 0 0 420px rgba(0, 0, 0, 0.573);
+            }
+    
+            header .original-nav ul{
+                display: flex;
+                 gap: 50px;
+            }
+    
+            header .original-nav ul li{
+                list-style: none;
+            }
+    
+            header .original-nav ul li a{
+                text-decoration: none;
+                color: aliceblue;
+    
+            }
+
+            main .section-1 .oneBackground img{
+                position: fixed;
+                top: 0;
+                
+                z-index: -2;
+            }
+
+            .mainText{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.303);
+            }
+            
+            .mainText .mainSpace{
+                border-right: solid 10px #FFB703;
+                font-size: 30px;
+                color: #FFB703;
+                font-family: sans-serif;
+                animation:  identifier 0.7s ease-in-out infinite;
+            }
+
+            @keyframes identifier {
+                0%{
+                    border-right: none;
+                }
+                
+                100%{
+                    border-right: solid 10px #FFB703;
+                }
+            }
+            
+            .section-1 .oneh2{
+            }
+        }
+
+    
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BeatBox</title>
 </head>
 <body>
+
+    <header>
+        <h1 class="logo">
+            BeatBox
+        </h1>
+
+        <nav class="original-nav">
+            <ul>
+                <li><a href="#">Try Out for free</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
     
+        <nav class="invisibleMenu">
+            <ul>
+                #
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-1">
+            <div class="oneBackground">
+                <img src="./img/flowerBackground.jpg" alt="">
+            </div>
+
+            <div class="mainText">
+
+                <div class="mainSpace">
+                    <h1>Find Your Rhythm</h1>
+                    <h2 class="oneh2">Play the drums, Take the stage, make your beat</h2>
+                </div>
+
+                
+            </div>
+
+        </section>
+    </main>
+
 </body>
 </html>
