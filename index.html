@@ -12,6 +12,10 @@
             body{
                 overflow: hidden;
             }
+
+            .registerSpace{
+                display: none;
+            }
     
             header{
                 color: aliceblue;
@@ -79,6 +83,104 @@
             }
         }
 
+        @media(max-width: 1000px){
+            body{
+                overflow: hidden;
+            }
+
+            
+
+            header{
+                display: none;
+            }
+
+            .oneBackground{
+                width: 100%;
+            }
+
+            .flowerPics{
+                position: fixed;
+                width: 100vw;
+                height: 100%;
+                z-index: -2;
+            }
+            .mainText{
+                background-color: rgba(0, 0, 0, 0.323);
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .mainSpace h1{
+                display: none;
+                
+                font-size: 20px;
+            }
+
+            .mainSpace h2{
+                display: none;
+            }
+
+            .registerSpace{
+                background-color: aliceblue;
+                width: 50%;
+                height: 70%;
+                font-family: sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2rem;
+                background-color: #FFB703;
+                box-shadow: 0 0 50px #FFB703, 0 0 100px;
+            }
+
+            .responsiveAsk{
+                display: flex;
+                margin-top: 100px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .responsiveAsk a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 40px;
+                text-align: center;
+                background-color: red;
+                border-radius: 20rem;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .responsiveAsk a:nth-of-type(1){
+                text-decoration: none;
+                background-color: black;
+                color: aliceblue;
+            }
+
+            .responsiveAsk a:nth-of-type(2){
+                background-color: transparent;
+                border: solid white;
+                color: black;
+                text-decoration: none;
+                background-color: aliceblue;
+            }
+
+            .responsiveAsk a:nth-of-type(1):active{
+                background-color: rgba(0, 0, 0, 0.477);
+            } 
+
+            .responsiveAsk a:nth-of-type(2):active{
+                background-color: transparent;
+            }
+            
+
+
+        }
     
     </style>
     <meta charset="UTF-8">
@@ -100,7 +202,7 @@
         </nav>
     
         <nav class="invisibleMenu">
-            <ul>
+            <ul class="ul">
                 #
             </ul>
         </nav>
@@ -109,7 +211,7 @@
     <main>
         <section class="section-1">
             <div class="oneBackground">
-                <img src="./img/flowerBackground.jpg" alt="">
+                <img class="flowerPics" src="./img/flowerBackground.jpg" alt="">
             </div>
 
             <div class="mainText">
@@ -119,6 +221,16 @@
                     <h2 class="oneh2">Play the drums, Take the stage, make your beat</h2>
                 </div>
 
+                <div class="registerSpace">
+                <div class="signUp">
+                    <h2>BeatBox</h2>
+                    <h1>Find Your Rhythm</h1>
+                    <div class="responsiveAsk">
+                    <a href="#">Try Out for free</a><br>
+                    <a href="#">Login</a></li>
+                </div>
+                </div>
+            </div>
                 
             </div>
 
